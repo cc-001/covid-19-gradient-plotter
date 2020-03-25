@@ -28,7 +28,7 @@ ax = plt.gca()
 formatter = dates.DateFormatter("%m-%d")
 ax.xaxis.set_major_formatter(formatter)
 
-locator = dates.DayLocator()
+locator = dates.AutoDateLocator()
 ax.xaxis.set_major_locator(locator)
 
 plt.title(url + " Cases Gradient")
