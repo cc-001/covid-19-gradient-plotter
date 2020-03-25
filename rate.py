@@ -5,8 +5,12 @@ import datetime as dt
 import urllib.request
 import re
 import calendar
+import sys
 
-url = "https://coronavirus-sf.now.sh/san-mateo-ca.html"
+area = "san-mateo-ca"
+if len(sys.argv) > 1:
+	area = sys.argv[1]
+url = "https://coronavirus-sf.now.sh/" + area + ".html"
 
 days_data = []
 cases_data = []
